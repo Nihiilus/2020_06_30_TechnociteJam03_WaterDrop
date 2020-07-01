@@ -6,26 +6,28 @@ using UnityEngine;
 public class AccelerometerMovement : MonoBehaviour
 {
     Rigidbody rb;
-    [SerializeField] float speed;
+    [SerializeField] float force;
+
+    Vector2 acceleration;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
+    private void Update()
+    {
+        acceleration = Input.acceleration;
+    }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        rb.AddForce(Input.acceleration.x * speed, 0, Input.acceleration.y * speed);
-        Debug.Log(Input.acceleration);
+        rb.AddForce(acceleration.x * force * Time.fixedDeltaTime, 0, acceleration.y * force * Time.fixedDeltaTime);
     }
 
     private void OnGUI()
     {
-        if (GUI.Button(new Rect(10, 10, 150, 100), Input.acceleration.ToString()))
-        {
-            print("You clicked the button!");
-        }
+        GUI.Box(new Rect(10, 10, 150, 100), Input.acceleration.ToString());
     }
 }
