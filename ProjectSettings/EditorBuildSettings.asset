@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Team/Axel/GyroscopeTest.unity
+    guid: 795a18c145f9b464eab5a1281c435874
   m_configObjects: {}
