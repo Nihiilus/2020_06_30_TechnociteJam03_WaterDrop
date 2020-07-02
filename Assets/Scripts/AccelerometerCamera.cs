@@ -10,6 +10,7 @@ public class AccelerometerCamera : MonoBehaviour
     Transform cameraRotationCenter;
     [SerializeField]
     float rotationAngleForce = 25;
+    [SerializeField] bool arrowInput;
 
     private void Start()
     {        
@@ -17,6 +18,11 @@ public class AccelerometerCamera : MonoBehaviour
     }
     void Update()
     {
-        cameraRotationCenter.rotation = Quaternion.Euler(new Vector3(Input.GetAxis("Vertical") * rotationAngleForce, 0, Input.GetAxis("Horizontal") * rotationAngleForce));       
+        if(arrowInput)
+            cameraRotationCenter.rotation = Quaternion.Euler(new Vector3(Input.GetAxis("Vertical") * rotationAngleForce, 0, Input.GetAxis("Horizontal") * rotationAngleForce));
+        else
+        {
+            cameraRotationCenter.rotation = Quaternion.Euler(new Vector3(Input.acceleration.x * rotationAngleForce, 0, Input.acceleration.y * rotationAngleForce));
+        }
     }
 }
