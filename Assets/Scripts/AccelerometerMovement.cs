@@ -8,6 +8,7 @@ public class AccelerometerMovement : MonoBehaviour
     Rigidbody rb;
     [SerializeField] float force;
     [SerializeField] bool keyInputCheat;
+    [SerializeField] bool debugs;
 
     Vector2 acceleration;
 
@@ -39,8 +40,11 @@ public class AccelerometerMovement : MonoBehaviour
 
     private void OnGUI()
     {
-        GUI.Box(new Rect(10, 10, 150, 100), movement.ToString());
-        GUI.Box(new Rect(10, 110, 150, 100), keyInput.ToString());
-        GUI.Box(new Rect(10, 210, 150, 100), acceleration.ToString());
+        if (debugs)
+        {
+            GUI.Box(new Rect(10, 10, 150, 30), movement.ToString());
+            GUI.Box(new Rect(10, 50, 150, 30), keyInput.ToString());
+            GUI.Box(new Rect(10, 90, 150, 30), acceleration.ToString());
+        }       
     }
 }
