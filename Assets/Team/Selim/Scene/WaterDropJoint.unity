@@ -940,10 +940,10 @@ SpringJoint:
   m_ConnectedBody: {fileID: 7503858122691928767}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.06000018, z: -1.2590011}
+  m_ConnectedAnchor: {x: 0, y: -0.000000014901161, z: -0.14100005}
   serializedVersion: 2
-  m_Spring: 100
-  m_Damper: 10
+  m_Spring: 1
+  m_Damper: 1
   m_MinDistance: 0
   m_MaxDistance: 0
   m_Tolerance: 0.025
@@ -1185,7 +1185,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2209846379242954564}
   m_LocalRotation: {x: 0.000000119209275, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.2590009, z: -0.060000062}
+  m_LocalPosition: {x: 0, y: 0.141, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7151848595526774688}
