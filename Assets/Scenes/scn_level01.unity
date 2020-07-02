@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44699448, g: 0.49688452, b: 0.57505894, a: 1}
+  m_IndirectSpecularColor: {r: 0.44699383, g: 0.49688387, b: 0.5750578, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -181,6 +181,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439108509338806695, guid: 0099366c67c3b12438982dbbf5942b25,
+        type: 3}
+      propertyPath: keyInputCheat
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439108509338806695, guid: 0099366c67c3b12438982dbbf5942b25,
+        type: 3}
+      propertyPath: debugs
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1439108509338806699, guid: 0099366c67c3b12438982dbbf5942b25,
         type: 3}
@@ -465,6 +475,11 @@ PrefabInstance:
         type: 3}
       propertyPath: rotationAngleForce
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2903810980634020591, guid: d0c3edbefea09a3408b66ac3ab0b2af9,
+        type: 3}
+      propertyPath: arrowInput
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4302297890569926850, guid: d0c3edbefea09a3408b66ac3ab0b2af9,
         type: 3}
