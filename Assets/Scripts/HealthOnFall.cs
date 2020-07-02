@@ -28,7 +28,6 @@ public class HealthOnFall : MonoBehaviour
                 startHeight = transform.position.y;
                 isFalling = true;
             }
-
         }
         else
         {
@@ -39,7 +38,7 @@ public class HealthOnFall : MonoBehaviour
                 float healthLost = ((maxHealthLost - minHealthLost) * fallDistanceNormalized) + minHealthLost;
 
 
-                EventManager.instance.LosingHP(new EventManager.LosingHPEventArgs() { HPlost = healthLost });               
+                EventManager.instance.ChangingHP(new EventManager.ChangingHPEventArgs() { HPchange = -healthLost });               
             }
             isFalling = false;
         }

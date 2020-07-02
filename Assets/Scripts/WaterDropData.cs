@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(Collider))]
 public class WaterDropData : MonoBehaviour
 {
     [SerializeField] float maxHealth = 10;
@@ -16,12 +17,12 @@ public class WaterDropData : MonoBehaviour
     {
         initialScale = transform.localScale.x;
         health = maxHealth;
-        EventManager.instance.OnLosingHP += OnLosingHpEventHandler;
+        EventManager.instance.OnChangingHP += OnChangingHpEventHandler;
     }
 
-    private void OnLosingHpEventHandler(object sender, EventManager.LosingHPEventArgs e)
+    private void OnChangingHpEventHandler(object sender, EventManager.ChangingHPEventArgs e)
     {
-        health -= e.HPlost;
+        health += e.HPchange;
         if(health < 0)
         {
             EventManager.instance.LosingLastHP();
