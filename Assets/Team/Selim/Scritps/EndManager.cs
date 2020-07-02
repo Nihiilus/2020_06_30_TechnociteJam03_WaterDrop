@@ -1,12 +1,16 @@
 ﻿
 using UnityEngine;
 
-public class EndManager : MonoBehaviour
+public class EndManager : SceneSwitcher
 {
 
-    
-    public void EndGame()
-    {
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            ReloadScene();
+            Debug.Log("it's working");
+        }
     }
 }
