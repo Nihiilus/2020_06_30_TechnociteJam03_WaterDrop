@@ -12,11 +12,11 @@ public class AccelerometerCamera : MonoBehaviour
     float rotationAngleForce = 25;
 
     private void Start()
-    {
+    {        
         cam = GetComponent<Camera>();
     }
     void Update()
     {
-        //cameraRotationCenter.rotation = Quaternion.Euler(new Vector3(Input.acceleration.x * rotationAngleForce, 0, Input.acceleration.y * rotationAngleForce));
+        cameraRotationCenter.rotation = Quaternion.Euler(new Vector3(Input.GetAxis("Vertical") * rotationAngleForce, 0, Input.GetAxis("Horizontal") * rotationAngleForce));       
     }
 }
