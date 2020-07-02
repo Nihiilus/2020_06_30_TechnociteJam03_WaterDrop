@@ -23,10 +23,10 @@ public class EventManager : MonoBehaviour
     public event EventHandler OnLosingLastHP;
     public void LosingLastHP() => OnLosingLastHP?.Invoke(this, EventArgs.Empty);
 
-    public class LosingHPEventArgs : EventArgs
+    public class ChangingHPEventArgs : EventArgs
     {
-        public float HPlost;
+        public float HPchange;
     }
-    public event EventHandler<LosingHPEventArgs> OnLosingHP;
-    public void LosingHP(LosingHPEventArgs e) => OnLosingHP?.Invoke(this, e);
+    public event EventHandler<ChangingHPEventArgs> OnChangingHP;
+    public void ChangingHP(ChangingHPEventArgs e) => OnChangingHP?.Invoke(this, e);
 }
