@@ -40,7 +40,7 @@ public class FallingCameraFOV : MonoBehaviour
         if(rigidBodyFalling.velocity.y < -effectStartingVelocity)
         {
             inAnimation = false;
-            currentLerpTime += Time.deltaTime;
+            
 
             //lerp!
             if(cam.fieldOfView > minFov)
@@ -48,6 +48,7 @@ public class FallingCameraFOV : MonoBehaviour
                 float perc = currentLerpTime / duration;
                 cam.fieldOfView = Mathf.Lerp(initialFov, minFov, perc);
             }
+            currentLerpTime += Time.deltaTime;
         }
         else
         {
