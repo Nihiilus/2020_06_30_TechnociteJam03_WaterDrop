@@ -2723,6 +2723,11 @@ PrefabInstance:
       propertyPath: rigidBodyFalling
       value: 
       objectReference: {fileID: 6163608994124707616}
+    - target: {fileID: 2903810980634020584, guid: d0c3edbefea09a3408b66ac3ab0b2af9,
+        type: 3}
+      propertyPath: minFov
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 2903810980634020590, guid: d0c3edbefea09a3408b66ac3ab0b2af9,
         type: 3}
       propertyPath: _targets.Array.data[0]._target
