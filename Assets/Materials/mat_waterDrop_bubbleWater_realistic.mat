@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: mat_waterDrop_bubbleWater_realistic
+  m_Shader: {fileID: 4800000, guid: 52f453b3a83a5834a8a082c94ca61153, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _matcaptexture:
+        m_Texture: {fileID: 2800000, guid: 83bd708e5cc92fb4a8442ac2c17c2403, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _opacitymatcap:
+        m_Texture: {fileID: 2800000, guid: cbc9c6f33cb2bec4d91cd1489a6f36f0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Cutoff: 0.5
+    - _emitpower: 0.5
+    - _gloss: 0.8
+    - _opacityintensity: 0.1
+    - _opacitypower: 0.9
+    - _refractionblend: 0.2
+    - _refractionintensity: 2
+    - _refractionpower: 1
+    - _specular: 1.365328
+    - _transmission: 0.3463756
+    m_Colors:
+    - _node_4106: {r: 0.6432894, g: 0.8926344, b: 0.9811321, a: 1}
+    - _tintcolor: {r: 0.6432894, g: 0.8926344, b: 0.9811321, a: 1}
