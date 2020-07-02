@@ -7,8 +7,12 @@ public class AccelerometerMovement : MonoBehaviour
 {
     Rigidbody rb;
     [SerializeField] float force;
+    [SerializeField] bool keyInputCheat;
 
     Vector2 acceleration;
+
+    Vector2 keyInput;
+    Vector3 movement;
 
     // Start is called before the first frame update
     void Start()
@@ -18,16 +22,25 @@ public class AccelerometerMovement : MonoBehaviour
     private void Update()
     {
         acceleration = Input.acceleration;
+        keyInput.x = Input.GetAxis("Horizontal");
+        keyInput.y = Input.GetAxis("Vertical");
+        if(keyInputCheat)
+            movement = new Vector3(keyInput.x, 0, keyInput.y) * force;
+        else
+            movement = new Vector3(acceleration.x, 0, acceleration.y) * force;
+
     }
 
     // Update is called once per frame
     void FixedUpdate()
-    {
-        rb.AddForce(acceleration.x * force * Time.fixedDeltaTime, 0, acceleration.y * force * Time.fixedDeltaTime);
+    {          
+        rb.AddForce(movement * Time.fixedDeltaTime);      
     }
 
     private void OnGUI()
     {
-        GUI.Box(new Rect(10, 10, 150, 100), Input.acceleration.ToString());
+        GUI.Box(new Rect(10, 10, 150, 100), movement.ToString());
+        GUI.Box(new Rect(10, 110, 150, 100), keyInput.ToString());
+        GUI.Box(new Rect(10, 210, 150, 100), acceleration.ToString());
     }
 }
