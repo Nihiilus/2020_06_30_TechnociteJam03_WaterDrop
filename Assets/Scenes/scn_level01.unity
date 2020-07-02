@@ -266,6 +266,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1439108509338806700, guid: 0099366c67c3b12438982dbbf5942b25,
+        type: 3}
+      propertyPath: minDistanceToLoseHealth
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439108509338806700, guid: 0099366c67c3b12438982dbbf5942b25,
+        type: 3}
+      propertyPath: maxDistanceToLoseHealth
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439108509338806700, guid: 0099366c67c3b12438982dbbf5942b25,
+        type: 3}
+      propertyPath: maxHealthLost
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439108509338806701, guid: 0099366c67c3b12438982dbbf5942b25,
+        type: 3}
+      propertyPath: maxHealth
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439108509338806701, guid: 0099366c67c3b12438982dbbf5942b25,
+        type: 3}
+      propertyPath: health
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0099366c67c3b12438982dbbf5942b25, type: 3}
 --- !u!1001 &400760521
