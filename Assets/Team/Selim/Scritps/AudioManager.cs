@@ -26,23 +26,14 @@ public class AudioManager : MonoBehaviour
 	private void Start()
 	{
         EventManager.instance.OnWinGame += OnWinGameHandler;
-        EventManager.instance.OnMainSong += OnMainSongHandler;
         EventManager.instance.OnCatchBubble += CatchBubbleHandler;
-        EventManager.instance.OnDeath += DeathHandler;
-        EventManager.instance.InMenu += InMenuHandler;
+        EventManager.instance.OnLosingLastHP += DeathHandler;
+        EventManager.instance.OnTouchLeaves += TouchLeavesHandler;
 
 		GameObject audioParentGO = new GameObject();
 		audioParentGO.name = "Sounds";
 		audioParent = audioParentGO.transform;
 	}
-
-    void OnMainSongHandler(object sender, EventArgs e)
-    {
-        Sound s = Array.Find(sounds, sound => sound.name == "MainSong");
-        if (s != null && s.source != null)
-            Destroy(s.source.gameObject);
-        AudioManager.instance.Play("MainSong");
-    }
 
     void CatchBubbleHandler(object sender, EventArgs e)
     {
@@ -69,13 +60,15 @@ public class AudioManager : MonoBehaviour
         AudioManager.instance.Play("Death");
     }
 
-    void InMenuHandler(object sender, EventArgs e)
+    void TouchLeavesHandler(object sender, EventArgs e)
     {
-        Sound s = Array.Find(sounds, sound => sound.name == "Menu");
+        Sound s = Array.Find(sounds, sound => sound.name == "TouchLeaves");
         if (s != null && s.source != null)
             Destroy(s.source.gameObject);
-        AudioManager.instance.Play("Menu");
+        AudioManager.instance.Play("TouchLeaves");
     }
+
+   
 
 
 
