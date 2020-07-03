@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8148017570977149750}
   - component: {fileID: 885120538143672576}
   - component: {fileID: 6878154536322545145}
+  - component: {fileID: 1236693450769557485}
   m_Layer: 0
   m_Name: leaf_3_atlas
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1236693450769557485
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5136578676307853605}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8982443722685645550, guid: ecbdcfc58cc796843ba05a70eea5ae3c, type: 3}
