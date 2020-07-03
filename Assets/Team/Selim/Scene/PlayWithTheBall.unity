@@ -284,7 +284,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1187228913}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89ad21445000c534f98f7ef452285bab, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d180979936f5ee499c8c5d989e45a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1497720988
@@ -408,6 +408,35 @@ MonoBehaviour:
     randomPitch: 0
     pitchRange: {x: 0, y: 0}
     loop: 1
+    source: {fileID: 0}
+    sources: []
+  - name: CatchBubble
+    clips:
+    - {fileID: 8300000, guid: ae28a3c33f1fcd34b99bd1dd8a8c6d97, type: 3}
+    - {fileID: 8300000, guid: c1cbae9f9e14f3a4ba2954aca941e134, type: 3}
+    volume: 0.3
+    randomPitch: 1
+    pitchRange: {x: 0, y: 0}
+    loop: 0
+    source: {fileID: 0}
+    sources: []
+  - name: Death
+    clips:
+    - {fileID: 8300000, guid: da2f2d3c4546d264bb3f9dbbc083b961, type: 3}
+    volume: 0.3
+    randomPitch: 0
+    pitchRange: {x: 0, y: 0}
+    loop: 0
+    source: {fileID: 0}
+    sources: []
+  - name: TouchLeaves
+    clips:
+    - {fileID: 8300000, guid: 5af513ce88a116f42b2d80cd5a01ca96, type: 3}
+    - {fileID: 8300000, guid: f6e35054f871b164b985b46e56754f71, type: 3}
+    volume: 0.3
+    randomPitch: 0
+    pitchRange: {x: 0, y: 0}
+    loop: 0
     source: {fileID: 0}
     sources: []
 --- !u!114 &1729086401

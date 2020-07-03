@@ -22,8 +22,7 @@ public class EventManager : MonoBehaviour
     public void LosingLastHP() => OnLosingLastHP?.Invoke(this, EventArgs.Empty);
 
 
-    public event EventHandler OnMainSong;
-    public void MainSong() => OnMainSong?.Invoke(this, EventArgs.Empty);
+    
 
 
     public event EventHandler OnCatchBubble;
@@ -37,9 +36,8 @@ public class EventManager : MonoBehaviour
     public event EventHandler OnDeath;
     public void Death() => OnDeath?.Invoke(this, EventArgs.Empty);
 
-
-    public event EventHandler InMenu;
-    public void MenuSong() => InMenu?.Invoke(this, EventArgs.Empty);
+    public event EventHandler OnTouchLeaves;
+    public void Touchleaves() => OnTouchLeaves?.Invoke(this, EventArgs.Empty);
 
 
 
