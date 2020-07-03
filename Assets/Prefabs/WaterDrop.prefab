@@ -65,8 +65,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6055c287c587baf47823cdd7d7041aad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 1000
-  keyInputCheat: 1
+  force: 2000
+  keyInputCheat: 0
   debugs: 0
 --- !u!114 &1439108509338806701
 MonoBehaviour:
