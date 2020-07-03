@@ -11,6 +11,7 @@ public class bonusDrop : MonoBehaviour
         if(collision.gameObject.GetComponent<WaterDropData>() != null)
         {
             EventManager.instance.ChangingHP(new EventManager.ChangingHPEventArgs() { HPchange = healthGained });
+            EventManager.instance.CatchBubble();
             Destroy(gameObject);
         }
     }
