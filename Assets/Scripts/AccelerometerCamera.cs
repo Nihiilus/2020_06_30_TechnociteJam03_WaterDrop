@@ -11,6 +11,9 @@ public class AccelerometerCamera : MonoBehaviour
     [SerializeField]
     float rotationAngleForce = 25;
     [SerializeField] bool arrowInput;
+    [SerializeField] float lerpFactor = 1;
+
+    Quaternion wantedRotation;
 
     private void Start()
     {        
@@ -22,8 +25,10 @@ public class AccelerometerCamera : MonoBehaviour
             cameraRotationCenter.rotation = Quaternion.Euler(new Vector3(Input.GetAxis("Vertical") * rotationAngleForce, 0, Input.GetAxis("Horizontal") * rotationAngleForce));
         else
         {
-            // lerp to smooth it
-            cameraRotationCenter.rotation = Quaternion.Euler(new Vector3(Input.acceleration.x * rotationAngleForce, 0, Input.acceleration.y * rotationAngleForce));
+            // lerp to smooth it but HOW?
+            wantedRotation = Quaternion.Euler(new Vector3(Input.acceleration.x * rotationAngleForce, 0, Input.acceleration.y * rotationAngleForce));
+
+            cameraRotationCenter.rotation = Quaternion.Lerp(cameraRotationCenter.rotation, wantedRotation, Time.deltaTime * lerpFactor);
         }
     }
 }
