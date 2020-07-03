@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1439108509338806697}
   - component: {fileID: 1439108509338806694}
   - component: {fileID: 1439108509338806700}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WaterDrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 1000
   keyInputCheat: 1
-  debugs: 1
+  debugs: 0
 --- !u!114 &1439108509338806701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,8 +80,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5302ca36ba872b48a0dd5c0e8c1a5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
-  health: 20
+  maxHealth: 80
+  health: 80
   minimumSize: 0.8
 --- !u!33 &1439108509338806696
 MeshFilter:
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d22e63726923c49bb4163bcad9b39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDistanceToLoseHealth: 5
-  minHealthLost: 1
-  maxDistanceToLoseHealth: 20
-  maxHealthLost: 10
+  minDistanceToLoseHealth: 12
+  minHealthLost: 10
+  maxDistanceToLoseHealth: 125
+  maxHealthLost: 100

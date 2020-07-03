@@ -8,7 +8,7 @@ using UnityEngine;
 public class WaterDropData : MonoBehaviour
 {
     [SerializeField] float maxHealth = 10;
-    [SerializeField] float health;
+    public float health;
     [SerializeField] [Range(0f, 1f)] float minimumSize;
 
     float initialScale;

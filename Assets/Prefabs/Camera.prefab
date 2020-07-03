@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2903810980634020586}
   - component: {fileID: 2903810980634020587}
   - component: {fileID: 2903810980634020584}
-  - component: {fileID: 2903810980634020590}
   - component: {fileID: 2903810980634020591}
   m_Layer: 0
   m_Name: Main Camera
@@ -29,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2903810980634020588}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalPosition: {x: 0, y: 11.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4302297890569926851}
@@ -51,16 +50,16 @@ Camera:
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 14.000642
+  m_FocalLength: 31.261068
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1
     height: 1
-  near clip plane: 3
+  near clip plane: 7
   far clip plane: 1000
-  field of view: 81.2
+  field of view: 42
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -99,9 +98,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidBodyFalling: {fileID: 0}
-  effectStartingVelocity: 4
-  minFov: 65
-  duration: 10
+  effectStartingVelocity: 2
+  minFov: 6
+  duration: 8
   backupDuration: 0.2
   animationCurve:
     serializedVersion: 2
@@ -127,36 +126,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2903810980634020590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2903810980634020588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccbfeb0bcb6bdc5438abaf933fd44761, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _name: 
-  _targets:
-  - _target: {fileID: 0}
-    _offset: {x: 0, y: 5, z: 0}
-    _space: 0
-    OnTargetReached:
-      m_PersistentCalls:
-        m_Calls: []
-  _sequence: 0
-  _startIndex: 0
-  _target:
-    _target: {fileID: 0}
-    _offset: {x: 0, y: 0, z: 0}
-    _space: 0
-    OnTargetReached:
-      m_PersistentCalls:
-        m_Calls: []
-  _speed: 10
 --- !u!114 &2903810980634020591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraRotationCenter: {fileID: 4302297890569926851}
-  rotationAngleForce: 5
+  rotationAngleForce: 2
   arrowInput: 1
 --- !u!1 &4302297890569926850
 GameObject:
@@ -181,6 +150,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4302297890569926851}
+  - component: {fileID: 519835250}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -203,3 +173,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519835250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4302297890569926850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccbfeb0bcb6bdc5438abaf933fd44761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: 
+  _targets:
+  - _target: {fileID: 0}
+    _offset: {x: 0, y: 0, z: 0}
+    _space: 0
+    OnTargetReached:
+      m_PersistentCalls:
+        m_Calls: []
+  _sequence: 0
+  _startIndex: 0
+  _target:
+    _target: {fileID: 0}
+    _offset: {x: 0, y: 0, z: 0}
+    _space: 0
+    OnTargetReached:
+      m_PersistentCalls:
+        m_Calls: []
+  _speed: 20
