@@ -140,7 +140,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraRotationCenter: {fileID: 4302297890569926851}
   rotationAngleForce: 2
-  arrowInput: 1
+  arrowInput: 0
+  lerpFactor: 1
 --- !u!1 &4302297890569926850
 GameObject:
   m_ObjectHideFlags: 0
