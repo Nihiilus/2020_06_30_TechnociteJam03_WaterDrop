@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4698760352502764485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4698760352502764472}
+  - component: {fileID: 4698760352502764475}
+  - component: {fileID: 4698760352502764474}
+  m_Layer: 0
+  m_Name: EventManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4698760352502764472
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4698760352502764485}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.366188, y: 103.98855, z: -25.204428}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4698760352502764475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4698760352502764485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1daa4f0385184442bd7f470d7aa99af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4698760352502764474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4698760352502764485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69215997c9f9f8840b95ec04065d1e6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: WinGame
+    clips:
+    - {fileID: 8300000, guid: 56480881787af1b45ab1d63fc80d2df3, type: 3}
+    volume: 0.3
+    randomPitch: 0
+    pitchRange: {x: 0, y: 0}
+    loop: 1
+    source: {fileID: 0}
+    sources: []
+  - name: CatchBubble
+    clips:
+    - {fileID: 8300000, guid: ae28a3c33f1fcd34b99bd1dd8a8c6d97, type: 3}
+    - {fileID: 8300000, guid: c1cbae9f9e14f3a4ba2954aca941e134, type: 3}
+    volume: 0.3
+    randomPitch: 1
+    pitchRange: {x: 0, y: 0}
+    loop: 0
+    source: {fileID: 0}
+    sources: []
+  - name: Death
+    clips:
+    - {fileID: 8300000, guid: da2f2d3c4546d264bb3f9dbbc083b961, type: 3}
+    volume: 0.3
+    randomPitch: 0
+    pitchRange: {x: 0, y: 0}
+    loop: 0
+    source: {fileID: 0}
+    sources: []
+  - name: TouchLeaves
+    clips:
+    - {fileID: 8300000, guid: 5af513ce88a116f42b2d80cd5a01ca96, type: 3}
+    - {fileID: 8300000, guid: f6e35054f871b164b985b46e56754f71, type: 3}
+    volume: 0.3
+    randomPitch: 0
+    pitchRange: {x: 0, y: 0}
+    loop: 0
+    source: {fileID: 0}
+    sources: []
