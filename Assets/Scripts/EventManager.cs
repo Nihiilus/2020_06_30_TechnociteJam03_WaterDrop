@@ -21,6 +21,9 @@ public class EventManager : MonoBehaviour
     public event EventHandler OnLosingLastHP;
     public void LosingLastHP() => OnLosingLastHP?.Invoke(this, EventArgs.Empty);
 
+    public event EventHandler OnWinGame;
+    public void WinGame() => OnWinGame?.Invoke(this, EventArgs.Empty);
+
     public class ChangingHPEventArgs : EventArgs
     {
         public float HPchange;
