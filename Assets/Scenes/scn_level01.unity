@@ -346,31 +346,6 @@ PrefabInstance:
       propertyPath: rigidBodyFalling
       value: 
       objectReference: {fileID: 1302636860}
-    - target: {fileID: 2903810980634020584, guid: d0c3edbefea09a3408b66ac3ab0b2af9,
-        type: 3}
-      propertyPath: minFov
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2903810980634020585, guid: d0c3edbefea09a3408b66ac3ab0b2af9,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 11.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 2903810980634020586, guid: d0c3edbefea09a3408b66ac3ab0b2af9,
-        type: 3}
-      propertyPath: m_FocalLength
-      value: 31.261068
-      objectReference: {fileID: 0}
-    - target: {fileID: 2903810980634020586, guid: d0c3edbefea09a3408b66ac3ab0b2af9,
-        type: 3}
-      propertyPath: field of view
-      value: 42
-      objectReference: {fileID: 0}
-    - target: {fileID: 2903810980634020586, guid: d0c3edbefea09a3408b66ac3ab0b2af9,
-        type: 3}
-      propertyPath: near clip plane
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 4302297890569926850, guid: d0c3edbefea09a3408b66ac3ab0b2af9,
         type: 3}
       propertyPath: m_Name
@@ -569,6 +544,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7715530172065554060, guid: 6bc4303b49b25a04889cb0b18f6e1938,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bc4303b49b25a04889cb0b18f6e1938, type: 3}
