@@ -21,8 +21,27 @@ public class EventManager : MonoBehaviour
     public event EventHandler OnLosingLastHP;
     public void LosingLastHP() => OnLosingLastHP?.Invoke(this, EventArgs.Empty);
 
+
+    public event EventHandler OnMainSong;
+    public void MainSong() => OnMainSong?.Invoke(this, EventArgs.Empty);
+
+
+    public event EventHandler OnCatchBubble;
+    public void CatchBubble() => OnCatchBubble?.Invoke(this, EventArgs.Empty);
+
+
     public event EventHandler OnWinGame;
     public void WinGame() => OnWinGame?.Invoke(this, EventArgs.Empty);
+
+
+    public event EventHandler OnDeath;
+    public void Death() => OnDeath?.Invoke(this, EventArgs.Empty);
+
+
+    public event EventHandler InMenu;
+    public void MenuSong() => InMenu?.Invoke(this, EventArgs.Empty);
+
+
 
     public class ChangingHPEventArgs : EventArgs
     {

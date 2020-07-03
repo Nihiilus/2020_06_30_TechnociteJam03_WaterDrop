@@ -22,6 +22,7 @@ public class AccelerometerCamera : MonoBehaviour
             cameraRotationCenter.rotation = Quaternion.Euler(new Vector3(Input.GetAxis("Vertical") * rotationAngleForce, 0, Input.GetAxis("Horizontal") * rotationAngleForce));
         else
         {
+            // lerp to smooth it
             cameraRotationCenter.rotation = Quaternion.Euler(new Vector3(Input.acceleration.x * rotationAngleForce, 0, Input.acceleration.y * rotationAngleForce));
         }
     }

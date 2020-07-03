@@ -3,11 +3,19 @@ using UnityEngine;
 
 public class EndManager : SceneSwitcher
 {
+    WaterDropData drop;
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.GetComponent<WaterDropData>() != null)
+        drop = collision.gameObject.GetComponent<WaterDropData>();
+        if (drop != null)
         {
-            EventManager.instance.WinGame();
+            Invoke("WinGame", 0.1f);
         }
+    }
+
+    void WinGame()
+    {
+        if (drop.health > 0)
+            EventManager.instance.WinGame();
     }
 }

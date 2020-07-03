@@ -25,8 +25,8 @@ public class FallingCameraFOV : MonoBehaviour
     float startingAnimationFov;
 
 
-    float currentLerpTime;
-    bool inAnimation;
+    float currentLerpTime = 0;
+    bool isRecovering;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,30 +39,32 @@ public class FallingCameraFOV : MonoBehaviour
     {
         if(rigidBodyFalling.velocity.y < -effectStartingVelocity)
         {
-            inAnimation = false;
-            
-
-            //lerp!
-            if(cam.fieldOfView > minFov)
+            if (isRecovering)
             {
-                float perc = currentLerpTime / duration;
-                cam.fieldOfView = Mathf.Lerp(initialFov, minFov, perc);
-            }
-            currentLerpTime += Time.deltaTime;
-        }
-        else
-        {
-            if (!inAnimation)
-            {
-                inAnimation = true;
+                isRecovering = false;
                 currentLerpTime = 0;
                 startingAnimationFov = cam.fieldOfView;
             }
-
-            currentLerpTime += Time.deltaTime;
-
+            
+            if(cam.fieldOfView > minFov)
+            {
+                currentLerpTime += Time.deltaTime;
+                float perc = currentLerpTime / duration;
+                cam.fieldOfView = Mathf.Lerp(startingAnimationFov, minFov, perc);                
+            }
+            
+        }
+        else
+        {
+            if (!isRecovering)
+            {
+                isRecovering = true;
+                currentLerpTime = 0;
+                startingAnimationFov = cam.fieldOfView;
+            }          
             if (cam.fieldOfView < initialFov)
             {
+                currentLerpTime += Time.deltaTime;
                 float perc = currentLerpTime / backupDuration;
                 cam.fieldOfView = Mathf.Lerp(startingAnimationFov, initialFov, perc);
             }
