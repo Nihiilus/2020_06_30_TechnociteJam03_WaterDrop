@@ -2642,7 +2642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minDistanceToLoseHealth: 5
-  minHealthLost: 5
+  minHealthLost: 1
   maxDistanceToLoseHealth: 20
   maxHealthLost: 10
 --- !u!114 &6163608994124707623
@@ -2657,8 +2657,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5302ca36ba872b48a0dd5c0e8c1a5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
-  health: 10
+  maxHealth: 20
+  health: 20
   minimumSize: 0
 --- !u!135 &6163608994124707628
 SphereCollider:
