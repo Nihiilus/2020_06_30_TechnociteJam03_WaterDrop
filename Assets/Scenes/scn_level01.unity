@@ -133,6 +133,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaterDrop
       objectReference: {fileID: 0}
+    - target: {fileID: 1439108509338806695, guid: 0099366c67c3b12438982dbbf5942b25,
+        type: 3}
+      propertyPath: keyInputCheat
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1439108509338806698, guid: 0099366c67c3b12438982dbbf5942b25,
         type: 3}
       propertyPath: m_Interpolate
@@ -205,17 +210,17 @@ PrefabInstance:
     - target: {fileID: 4620892892590858097, guid: 5e0d8016b517aff49a8b4eea28d3a98d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.8818511
+      value: 1.8949908
       objectReference: {fileID: 0}
     - target: {fileID: 4620892892590858097, guid: 5e0d8016b517aff49a8b4eea28d3a98d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 329
+      value: 332
       objectReference: {fileID: 0}
     - target: {fileID: 4620892892590858097, guid: 5e0d8016b517aff49a8b4eea28d3a98d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.5
+      value: -10.501925
       objectReference: {fileID: 0}
     - target: {fileID: 4620892892590858097, guid: 5e0d8016b517aff49a8b4eea28d3a98d,
         type: 3}
