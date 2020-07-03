@@ -33,7 +33,12 @@ public class AudioManager : MonoBehaviour
 		GameObject audioParentGO = new GameObject();
 		audioParentGO.name = "Sounds";
 		audioParent = audioParentGO.transform;
-	}
+
+        Sound s = Array.Find(sounds, sound => sound.name == "Music");
+        if (s != null && s.source != null)
+            Destroy(s.source.gameObject);
+        AudioManager.instance.Play("Music");
+    }
 
     void CatchBubbleHandler(object sender, EventArgs e)
     {

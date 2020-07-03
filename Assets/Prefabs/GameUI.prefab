@@ -84,7 +84,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1632182497370041544
 RectTransform:
   m_ObjectHideFlags: 0
@@ -794,7 +794,7 @@ MonoBehaviour:
   sounds:
   - name: WinGame
     clips:
-    - {fileID: 8300000, guid: 56480881787af1b45ab1d63fc80d2df3, type: 3}
+    - {fileID: 8300000, guid: 5e631ebc9ab177c47ba6392761ad3892, type: 3}
     volume: 0.3
     randomPitch: 0
     pitchRange: {x: 0, y: 0}
@@ -807,7 +807,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: c1cbae9f9e14f3a4ba2954aca941e134, type: 3}
     volume: 0.3
     randomPitch: 1
-    pitchRange: {x: 0, y: 0}
+    pitchRange: {x: 0.8, y: 1.2}
     loop: 0
     source: {fileID: 0}
     sources: []
@@ -825,9 +825,18 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 5af513ce88a116f42b2d80cd5a01ca96, type: 3}
     - {fileID: 8300000, guid: f6e35054f871b164b985b46e56754f71, type: 3}
     volume: 0.3
+    randomPitch: 1
+    pitchRange: {x: 0.7, y: 1.3}
+    loop: 0
+    source: {fileID: 0}
+    sources: []
+  - name: Music
+    clips:
+    - {fileID: 8300000, guid: 56480881787af1b45ab1d63fc80d2df3, type: 3}
+    volume: 0.3
     randomPitch: 0
     pitchRange: {x: 0, y: 0}
-    loop: 0
+    loop: 1
     source: {fileID: 0}
     sources: []
 --- !u!1 &2787970096255919638
